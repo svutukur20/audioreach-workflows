@@ -1,4 +1,4 @@
-echo "Checking commit messages..."
+echo "Checking commit messages.. for new runs."
           COMMITS=$(git log origin/master..HEAD --pretty=format:"%H")
           for COMMIT in $COMMITS; do
             TITLE=$(git log -1 --pretty=format:"%s" $COMMIT)
@@ -21,3 +21,4 @@ echo "Checking commit messages..."
               exit 1
             fi
           done
+          
